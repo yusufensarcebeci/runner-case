@@ -34,6 +34,8 @@ export class ScreenManager extends Component {
     };
 
     GameStateManager.subscribe(this.updateScreens.bind(this));
+    GameStateManager.setCurrentState(GameState.LOADING);
+
   }
 
   private updateScreens(state: GameState): void {

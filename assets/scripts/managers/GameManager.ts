@@ -8,17 +8,23 @@ export class GameManager extends Component {
   @property({ type: ScreenManager })
   screenManager: ScreenManager = null;
   onLoad() {
-    // GameStateManager.subscribe(this.onGameStateChanged.bind(this));
+    GameStateManager.subscribe(this.onGameStateChanged.bind(this));
   }
 
   protected start(): void {
-    // this.scheduleOnce(() => {
-    //   this.screenManager.showScreen(GameScreenType.INITIAL_SCREEN);
-    // }, 2);
+    this.scheduleOnce(() => {
+      this.loadComplete();
+    }, 2);
+  }
+  private loadComplete() {
+    GameStateManager.setCurrentState(GameState.INITIAL);
   }
 
   private onGameStateChanged(state: GameState): void {
     switch (state) {
+      case GameState.LOADING:
+        this.gameInitialized();
+        break;
       case GameState.GAME_RUNNING:
         this.startGame();
         break;
@@ -31,8 +37,12 @@ export class GameManager extends Component {
     }
   }
 
+  private gameInitialized(): void {
+    console.log("Game Initializing");
+  }
+
   private startGame(): void {
-    console.log("Game Started");
+    console.log("Game Started!");
   }
 
   private pauseGame(): void {

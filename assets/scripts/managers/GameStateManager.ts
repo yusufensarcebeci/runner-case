@@ -7,7 +7,7 @@ export enum GameState {
 }
 
 export class GameStateManager {
-  private static currentState: GameState;
+  private static currentState: GameState = GameState.LOADING;
   private static subscribers: Function[] = [];
 
   static getCurrentState(): GameState {
