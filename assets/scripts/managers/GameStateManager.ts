@@ -1,19 +1,31 @@
 export enum GameState {
-    LOADING = "LOADING",
-    INIT = "INIT",
-    GAME_RUNNING = "GAME_RUNNING",
-    GAME_OVER = "GAME_OVER",
+  LOADING = 0,
+  INITIAL = 1,
+  GAME_RUNNING = 2,
+  GAME_PAUSED = 3,
+  GAME_OVER = 4,
+}
+
+export class GameStateManager {
+  private static currentState: GameState;
+  private static subscribers: Function[] = [];
+
+  static getCurrentState(): GameState {
+    return this.currentState;
   }
-  
-  export class GameStateManager {
-    private static currentState: GameState = GameState.INIT;
-  
-    static getCurrentState(): GameState {
-      return this.currentState;
-    }
-  
-    static setCurrentState(state: GameState): void {
-      this.currentState = state;
-      console.log(`Game State Updated: ${state}`);
+
+  static setCurrentState(state: GameState) {
+    GameStateManager.currentState = state;
+    GameStateManager.notifySubscribers(state);
+  }
+
+  static subscribe(callback: Function) {
+    GameStateManager.subscribers.push(callback);
+  }
+
+  private static notifySubscribers(state: GameState) {
+    for (const subscriber of GameStateManager.subscribers) {
+      subscriber(state);
     }
   }
+}
