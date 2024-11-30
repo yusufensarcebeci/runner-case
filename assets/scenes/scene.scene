@@ -27,19 +27,19 @@
         "__id__": 59
       },
       {
-        "__id__": 65
+        "__id__": 64
       },
       {
         "__id__": 6
       },
       {
-        "__id__": 68
+        "__id__": 67
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 76
+      "__id__": 75
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -70,7 +70,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 77
+      "__id__": 76
     },
     "_id": "05165212-9267-40f3-ac90-70bd7ed3ae85"
   },
@@ -2064,9 +2064,6 @@
       },
       {
         "__id__": 63
-      },
-      {
-        "__id__": 64
       }
     ],
     "_prefab": null,
@@ -2207,17 +2204,6 @@
     "_id": "30YScLuBJPhqhMHZeAD+2s"
   },
   {
-    "__type__": "67b15t96U9Lk4W2wAimQ9Z6",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 59
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_id": "35w9ASSyRGLpB0NvmMwSKs"
-  },
-  {
     "__type__": "cc.Node",
     "_name": "Plane",
     "_objFlags": 0,
@@ -2228,7 +2214,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 66
+        "__id__": 65
       }
     ],
     "_prefab": null,
@@ -2266,7 +2252,7 @@
     "_name": "Plane<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 65
+      "__id__": 64
     },
     "_enabled": true,
     "__prefab": null,
@@ -2278,7 +2264,7 @@
     ],
     "_visFlags": 0,
     "bakeSettings": {
-      "__id__": 67
+      "__id__": 66
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@2e76e",
@@ -2320,14 +2306,14 @@
       "__id__": 1
     },
     "_prefab": {
-      "__id__": 69
+      "__id__": 68
     },
     "__editorExtras__": {}
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 68
+      "__id__": 67
     },
     "asset": {
       "__uuid__": "041ec42b-042a-4373-9712-724826a862a3",
@@ -2335,7 +2321,7 @@
     },
     "fileId": "32jjsQnARKEpbwk8J+IS3o",
     "instance": {
-      "__id__": 70
+      "__id__": 69
     },
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -2348,16 +2334,16 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
-        "__id__": 71
+        "__id__": 70
+      },
+      {
+        "__id__": 72
       },
       {
         "__id__": 73
       },
       {
         "__id__": 74
-      },
-      {
-        "__id__": 75
       }
     ],
     "removedComponents": []
@@ -2365,7 +2351,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 72
+      "__id__": 71
     },
     "propertyPath": [
       "_name"
@@ -2381,7 +2367,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 72
+      "__id__": 71
     },
     "propertyPath": [
       "_lpos"
@@ -2396,7 +2382,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 72
+      "__id__": 71
     },
     "propertyPath": [
       "_lrot"
@@ -2412,7 +2398,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 72
+      "__id__": 71
     },
     "propertyPath": [
       "_euler"
@@ -2433,29 +2419,29 @@
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": [
       {
-        "__id__": 68
+        "__id__": 67
       }
     ]
   },
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 78
+      "__id__": 77
     },
     "shadows": {
-      "__id__": 79
+      "__id__": 78
     },
     "_skybox": {
-      "__id__": 80
+      "__id__": 79
     },
     "fog": {
-      "__id__": 81
+      "__id__": 80
     },
     "octree": {
-      "__id__": 82
+      "__id__": 81
     },
     "lightProbeInfo": {
-      "__id__": 83
+      "__id__": 82
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false
