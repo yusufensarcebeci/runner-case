@@ -1,13 +1,8 @@
 import { _decorator, Component, Node } from "cc";
-import { GameState, GameStateManager } from "./GameStateManager";
+import { GameStateManager } from "./GameStateManager";
+import { GameState } from "../enums/GameState";
+import { GameScreenType } from "../enums/GameScreenType";
 const { ccclass, property } = _decorator;
-
-export enum GameScreenType {
-  LOADING_SCREEN = "LoadingScreen",
-  INITIAL_SCREEN = "InitialScreen",
-  GAME_SCREEN = "GameScreen",
-  GAME_END_SCREEN = "GameEndScreen",
-}
 
 @ccclass("ScreenManager")
 export class ScreenManager extends Component {
@@ -50,7 +45,7 @@ export class ScreenManager extends Component {
         this.showScreen(GameScreenType.GAME_SCREEN);
         break;
       case GameState.GAME_PAUSED:
-        // Pause ekranı gösterilebilir
+        // Show Pause Screen
         break;
       case GameState.GAME_OVER:
         this.showScreen(GameScreenType.GAME_END_SCREEN);

@@ -2152,17 +2152,6 @@
     "_probeCubemap": null
   },
   {
-    "__type__": "01c74xMI7NLibmljyB6wy5l",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 59
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_id": "bda9I+ld1C550Hia7rkR/g"
-  },
-  {
     "__type__": "cc.RigidBody",
     "_name": "",
     "_objFlags": 0,
@@ -2216,6 +2205,17 @@
       "z": 1.5
     },
     "_id": "30YScLuBJPhqhMHZeAD+2s"
+  },
+  {
+    "__type__": "67b15t96U9Lk4W2wAimQ9Z6",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 59
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "_id": "35w9ASSyRGLpB0NvmMwSKs"
   },
   {
     "__type__": "cc.Node",

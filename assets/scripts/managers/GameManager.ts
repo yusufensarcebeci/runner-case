@@ -1,6 +1,7 @@
 import { _decorator, Component, Node } from "cc";
-import { GameState, GameStateManager } from "./GameStateManager";
-import { GameScreenType, ScreenManager } from "./ScreenManager";
+import { GameStateManager } from "./GameStateManager";
+import { ScreenManager } from "./ScreenManager";
+import { GameState } from "../enums/GameState";
 const { ccclass, property } = _decorator;
 
 @ccclass("GameManager")
