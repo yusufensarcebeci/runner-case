@@ -1,14 +1,20 @@
-import { _decorator, Component, EventMouse, Input, input, Node, Vec2 } from 'cc';
-const { ccclass, property } = _decorator;
+import { _decorator, EventMouse, Input, input, Vec2 } from "cc";
+const { ccclass } = _decorator;
 
-@ccclass('SwipeManager')
-export class SwipeManager extends Component {
-    private startPoint: Vec2 = new Vec2();
+@ccclass("SwipeManager")
+export class SwipeManager  {
+  private static instance: SwipeManager | null = null;
+
+  private startPoint: Vec2 = new Vec2();
   private endPoint: Vec2 = new Vec2();
   private threshold: number = 10;
 
-  protected onLoad(): void {
-    this.initializeInputListener();
+  public static getInstance(): SwipeManager {
+    if (!SwipeManager.instance) {
+      SwipeManager.instance = new SwipeManager();
+      SwipeManager.instance.initializeInputListener();
+    }
+    return SwipeManager.instance;
   }
 
   private initializeInputListener(): void {
@@ -46,17 +52,15 @@ export class SwipeManager extends Component {
     }
   }
 
-  private onSwipeRight(): void {
+  public  onSwipeRight(): void {
     console.log("Swipe Right Detected");
   }
 
-  private onSwipeLeft(): void {
+  public  onSwipeLeft(): void {
     console.log("Swipe Left Detected");
   }
 
-  private onSwipeUp(): void {
+  public  onSwipeUp(): void {
     console.log("Swipe Up Detected");
   }
 }
-
-

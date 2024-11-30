@@ -1,21 +1,24 @@
-// import { _decorator, Component, Node } from 'cc';
-// import { SwipeManager } from '../player/SwipeManager';
-// const { ccclass, property } = _decorator;
+import { _decorator, Component, Node } from 'cc';
+import { SwipeManager } from '../managers/SwipeManager';
+import { PlayerController } from '../player/PlayerController';
 
-// @ccclass('GameController')
-// export class GameController extends Component {
-//     private swipeManager: SwipeManager;
-//     private playerController: PlayerC;
-  
-//     onLoad() {
-//       this.swipeManager = this.getComponent(SwipeManager);
-//       this.characterController = this.getComponent(CharacterController>();
-  
-//       // Swipe hareketlerini dinle
-//       this.swipeManager.onSwipeRight = this.characterController.moveRight.bind(this.characterController);
-//       this.swipeManager.onSwipeLeft = this.characterController.moveLeft.bind(this.characterController);
-//       this.swipeManager.onSwipeUp = this.characterController.jump.bind(this.characterController);
-//     }
-// }
+const { ccclass, property } = _decorator;
 
+@ccclass('GameController')
+export class GameController extends Component {
+    @property(PlayerController)
+    private playerController: PlayerController = null;
 
+    onLoad() {
+        if (!this.playerController) {
+            console.error('PlayerController is not assigned in the inspector.');
+            return;
+        }
+
+        const swipeManager = SwipeManager.getInstance();
+
+        swipeManager.onSwipeRight = this.playerController.moveRight.bind(this.playerController);
+        swipeManager.onSwipeLeft = this.playerController.moveLeft.bind(this.playerController);
+        swipeManager.onSwipeUp = this.playerController.jump.bind(this.playerController);
+    }
+}

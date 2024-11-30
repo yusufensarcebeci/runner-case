@@ -1,5 +1,7 @@
 import { _decorator, Component, Node, Vec3 } from "cc";
-import { GameState, GameStateManager } from "./GameStateManager";
+import { GameState } from "../enums/GameState";
+import { GameStateManager } from "../managers/GameStateManager";
+GameStateManager
 const { ccclass, property } = _decorator;
 
 @ccclass("UIManager")
