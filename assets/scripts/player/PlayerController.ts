@@ -1,5 +1,5 @@
 import { _decorator, Component, tween, Vec3 } from "cc";
-import { SwipeDetector } from "../managers/SwipeDetector";
+import { SwipeDetector } from "../core/SwipeDetector";
 import { SwipeType } from "../enums/SwipeType";
 import { GameStateManager } from "../managers/GameStateManager";
 import { GameState } from "../enums/GameState";

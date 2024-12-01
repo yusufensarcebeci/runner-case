@@ -1,5 +1,5 @@
 import { _decorator, input, Input, EventMouse, Vec2 } from "cc";
-import { SwipeType } from "../enums/SwipeType"; // SwipeType enum import edilmiş
+import { SwipeType } from "../enums/SwipeType"; 
 
 const { ccclass } = _decorator;
 
